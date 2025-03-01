@@ -1,0 +1,52 @@
+/* Estilos Personalizados */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+    background: url('imagens/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-section, .services-section, .projects-section, .testimonials-section, .contact-section {
+    padding: 60px 0;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.testimonial img {
+    border: 3px solid #456586;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.social-links a {
+    color: #007bff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
