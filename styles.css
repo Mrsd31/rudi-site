@@ -1,52 +1,304 @@
-/* Estilos Personalizados */
+/* Estilos Gerais */
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
 }
 
-.hero-section {
-    background: url('imagens/hero.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
+.fundo-imagem {
+    background-image: url('imagens/fundo001.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    width: 100%; /* Largura do elemento */
+    height: 400px; /* Altura do elemento */
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+/* Navbar */
+.navbar {
+    background-color: #343a40 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about-section, .services-section, .projects-section, .testimonials-section, .contact-section {
-    padding: 60px 0;
-}
-
-.card {
+.navbar-brand img {
     transition: transform 0.3s;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.navbar-brand img:hover {
+    transform: scale(1.1);
 }
 
-.testimonial img {
-    border: 3px solid #456586;
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #254af0 !important;
+}
+
+/* Seção Hero */
+.hero-section {
+    background-color: #fff; /* Fundo branco */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #e5eaf0; /* Cor do texto escuro para contraste */
+    padding: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    animation: fadeInDown 1.5s ease-in-out;
+    color: #ffffff; /* Cor do título */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+    color: #ffffff; /* Cor do parágrafo */
+}
+
+.hero-section .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    animation: fadeIn 2s ease-in-out;
+    background-color: #ffbf00; /* Cor do botão (amarelo) */
+    border: none;
+    color: #343a40; /* Cor do texto do botão */
+    transition: background-color 0.3s;
+}
+
+.hero-section .btn:hover {
+    background-color: #d4a20b; /* Cor do botão ao passar o mouse */
+}
+
+/* Seção Sobre Nós */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('imagens/fundo-video.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.about-section {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-section video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção Serviços */
+.services-section {
+    padding: 80px 0;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Seção Projetos */
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 40px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* Seção Contato */
+.contact-section {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 40px;
+}
+
+.contact-section .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.contact-section .btn {
+    background-color: #ffc107;
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    transition: background-color 0.3s;
+}
+
+.contact-section .btn:hover {
+    background-color: #e0a800;
 }
 
 .contact-info {
-    background: #f8f9fa;
+    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
 }
 
+.contact-info h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
 .social-links a {
-    color: #007bff;
+    color: #343a40;
+    font-size: 1.5rem;
     margin: 0 10px;
-    font-size: 24px;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #0056b3;
+    color: #ffc107;
+}
+
+/* Rodapé */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
