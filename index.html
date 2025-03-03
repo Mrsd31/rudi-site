@@ -139,25 +139,56 @@
             </div>
         </div>
     </section>
-
-    <!-- Seção Contato -->
-    <section id="contact" class="contact-section py-5">
-        <div class="container">
             <img src="imagens/logo-rudi2.png" alt="logo-em">
-            <h2 class="text-center mb-5">Entre em Contato</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Seu Nome" required>
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Seu E-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+
+                        <!-- Seção Contato -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Entre em Contato</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="enviarWhatsApp()">Enviar via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function enviarWhatsApp() {
+        // Coletar os valores do formulário
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var mensagem = document.getElementById('mensagem').value;
+
+        // Criar a mensagem que será enviada
+        var texto = `Nome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}`;
+
+        // Codificar a mensagem para uso em URL
+        var textoCodificado = encodeURIComponent(texto);
+
+        // Número de telefone para o qual a mensagem será enviada
+        var numeroWhatsApp = "5521992962494"; // Substitua pelo número desejado
+
+        // Criar o link do WhatsApp
+        var urlWhatsApp = `https://wa.me/qr/YYICDMZSMRE5L1`;
+
+        // Redirecionar o usuário para o WhatsApp
+        window.open(urlWhatsApp, '_blank');
+    }
+</script>
+
                     </form>
                 </div>
                 <div class="col-md-6">
