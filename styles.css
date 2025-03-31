@@ -9,11 +9,11 @@ body {
 
 .fundo-imagem {
     background-image: url('imagens/fundo001.jpg');
-    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    width: 100%; /* Largura do elemento */
-    height: 400px; /* Altura do elemento */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    height: 400px; 
 }
 
 /* Navbar */
@@ -42,13 +42,13 @@ body {
 
 /* Seção Hero */
 .hero-section {
-    background-color: #fff; /* Fundo branco */
+    background-color: #fff; 
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #e5eaf0; /* Cor do texto escuro para contraste */
+    color: #e5eaf0; 
     padding: 20px;
 }
 
@@ -56,28 +56,27 @@ body {
     font-size: 3.5rem;
     font-weight: bold;
     animation: fadeInDown 1.5s ease-in-out;
-    color: #ffffff; /* Cor do título */
+    color: #ffffff; 
 }
 
 .hero-section p {
     font-size: 1.5rem;
     margin-bottom: 20px;
     animation: fadeInUp 1.5s ease-in-out;
-    color: #ffffff; /* Cor do parágrafo */
+    color: #ffffff; 
 }
 
 .hero-section .btn {
     font-size: 1.2rem;
     padding: 10px 30px;
     animation: fadeIn 2s ease-in-out;
-    background-color: #ffbf00; /* Cor do botão (amarelo) */
-    border: none;
-    color: #343a40; /* Cor do texto do botão */
+    background-color: #ffbf00; 
+    color: #343a40;
     transition: background-color 0.3s;
 }
 
 .hero-section .btn:hover {
-    background-color: #d4a20b; /* Cor do botão ao passar o mouse */
+    background-color: #d4a20b; 
 }
 
 /* Seção Sobre Nós */
